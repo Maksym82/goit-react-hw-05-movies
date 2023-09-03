@@ -6,7 +6,7 @@ const options = {
     headers: {
         accept: 'application/json',
         Authorization:
-        'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkNWIwYzYzN2RhYzFmZmFlMThjZDRmYmRjMjc1ZWFhOSIsInN1YiI6IjY0OTVjMzgzZDVmZmNiMDBlMjA1NzIzOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.x9lPMVl4nfFlN901y3yy6-AcoB6SAlcKg0T-FQPITKg',
+        'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwODg4ZDUxNDU1ODFkNGU5MWE1NzEwNmE2Zjg3NTczMiIsInN1YiI6IjY0ZjRiZGRjOWU0NTg2MDBhZDdmMzZjZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.MR7j7j0anR-0y1CkqSWu6_5-5CNC_cl_ecbn99T0_48',
     },
 };
 
