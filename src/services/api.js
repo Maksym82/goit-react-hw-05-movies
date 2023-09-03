@@ -27,3 +27,18 @@ async function fetchMovieDetails(id) {
     const response = await axios.get(`/movie/${id}?language=en-US`, options);
     return response.data;
 }
+
+async function fetchAddition(id, param) {
+    const response = await axios.get(
+        `movie/${id}/${param}?language=en-US`,
+        options
+    );
+    return response.data;
+}
+
+export {
+    fetchTrendingMovies,
+    fetchMovieSearch,
+    fetchMovieDetails,
+    fetchAddition,
+};
