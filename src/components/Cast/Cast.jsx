@@ -5,7 +5,7 @@ import photo from './photo.jpg';
 import { CastList, CastItem, CastText, Name } from './Cast.styled';
 
 function Cast() {
-    const { movieId } useParams();
+    const { movieId } = useParams();
     const [cast, setCast] = useState([]);
     useEffect(() => {
         if (!movieId) return;
