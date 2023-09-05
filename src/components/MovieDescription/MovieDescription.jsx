@@ -1,6 +1,17 @@
 import { Outlet, useLocation } from 'react-router-dom';
 import { useRef, Suspense } from 'react';
 import PropTypes from 'prop-types';
+import {
+  Container,
+  GoBack,
+  Description,
+  Title,
+  Text,
+  Addition,
+  AdditionList,
+  AdditionLink,
+} from './MovieDescription.styled';
+
 
 function MovieDescription({ details }) {
   const { title, release_date, vote_average, overview, genres, poster_path } =
