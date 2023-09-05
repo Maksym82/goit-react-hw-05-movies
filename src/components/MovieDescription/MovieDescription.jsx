@@ -11,6 +11,7 @@ import {
   AdditionList,
   AdditionLink,
 } from './MovieDescription.styled';
+import question from './question.png';
 
 
 function MovieDescription({ details }) {
@@ -30,7 +31,7 @@ function MovieDescription({ details }) {
               src={
                 poster_path
                   ? 'https://image.tmdb.org/t/p/w300' + poster_path
-                  : what
+                  : question
               }
               width={250}
               height={400}
