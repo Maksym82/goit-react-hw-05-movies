@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-
+import { Form, Input, Button } from './Search.styled';
 
 
 function Search({ onSubmit }) {
