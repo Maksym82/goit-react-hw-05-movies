@@ -18,7 +18,7 @@ function MovieDescription({ details }) {
   const { title, release_date, vote_average, overview, genres, poster_path } =
     details;
   const date = new Date(release_date).getFullYear();
-  const Location = useLocation();
+  const location = useLocation();
   const backLinkLocation = useRef(location.state?.from ?? './movies');
 
   return (
@@ -70,7 +70,7 @@ function MovieDescription({ details }) {
   );
 }
 
-MovieDescription.PropTypes = {
+MovieDescription.propTypes = {
     details: PropTypes.shape({
         title: PropTypes.string,
         release_date: PropTypes.string,

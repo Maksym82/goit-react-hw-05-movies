@@ -44,6 +44,7 @@ export {
   GoBack,
   Description,
   Title,
+  Text,
   Addition,
   AdditionList,
   AdditionLink,
