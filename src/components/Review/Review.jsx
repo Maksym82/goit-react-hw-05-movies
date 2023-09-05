@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchAddition } from '../../services/api';
+import { ReviewList, ReviewItem, Name, Comment } from './Review.styled';
 
 function Review() {
   const { movieId } = useParams();
