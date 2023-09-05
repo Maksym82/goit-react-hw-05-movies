@@ -6,7 +6,17 @@ function Home() {
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
-        fetchTrendingMovies().then(res => setMovies(res));
+        const fetchRequest = async() => {
+            try {
+                const response = await fetchTrendingMovies();
+                console.log(response)
+                setMovies(response.results)
+            } catch (error) {
+                console.error("Not found")
+            }
+        }
+        fetchRequest();
+        
     }, []);
 
     return (

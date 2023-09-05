@@ -2,7 +2,7 @@ import { useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { List, MovieLink } from './MovieList.styled';
 
-function MoviesList({ movies }) {
+function MoviesList(movies) {
   const location = useLocation();
   return (
     <List>
