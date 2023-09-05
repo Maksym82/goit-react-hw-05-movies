@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { fetchAddition } from '../../services/api';
-import photo from './photo.jpg';
+import photo from './photo.png';
 import { CastList, CastItem, CastText, Name } from './Cast.styled';
 
 function Cast() {
