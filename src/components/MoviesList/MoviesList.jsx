@@ -1,6 +1,8 @@
 import { useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { List, MovieLink } from './MovieList.styled';
+import { BunnerFilms } from 'components/Layout/Layout.styled';
+import question from '../MovieDescription/question.png';
 const IMG_URL = `https://image.tmdb.org/t/p/w500`;
 
 
@@ -13,13 +15,13 @@ function MoviesList(movies) {
         ({ id, title, poster_path }) =>
           title && (
             <li key={id}>
-              <img src={`${IMG_URL}${poster_path}`} alt={title} />
+              
               <MovieLink
                 key={id}
                 to={`/movies/${id}`}
                 state={{ from: location }}
               >
-                {title}
+                <BunnerFilms src={poster_path ? `${IMG_URL}${poster_path}` : question } alt={title} />
               </MovieLink>
             </li>
           )
