@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const List = styled.ul`
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 5px;
     list-style: none;
     padding: 0;

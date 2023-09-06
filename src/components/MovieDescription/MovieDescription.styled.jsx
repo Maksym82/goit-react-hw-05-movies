@@ -1,16 +1,12 @@
 import styled from '@emotion/styled';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Container = styled.div`
   display: flex;
   margin-bottom: 20px;
 `;
 
-const GoBack = styled.a(Link)`
-    display: block;
-    padding: 5px;
-    text-decoration: none;
-`;
+
 
 const Description = styled.div`
   padding: 20px;
@@ -41,7 +37,7 @@ const AdditionLink = styled(NavLink)`
 
 export {
   Container,
-  GoBack,
+
   Description,
   Title,
   Text,

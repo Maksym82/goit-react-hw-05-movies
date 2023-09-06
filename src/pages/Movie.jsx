@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { useLocation, useSearchParams } from "react-router-dom";
-// import MoviesList from 'components/MoviesList/MoviesList';
+import MoviesList from 'components/MoviesList/MoviesList';
 import Search from 'components/Search/Search';
 import { fetchMovieSearch } from '../services/api';
-import { List, MovieLink } from "components/MoviesList/MovieList.styled";
+
 
 
 function Movie() {
@@ -18,6 +18,7 @@ function Movie() {
     
     useEffect(() => {
         if (!query) return;
+        setMovies([]);
         const fetchRequestMovieSearch = async() => {
             try {
                 const res = await fetchMovieSearch(query);
@@ -29,26 +30,11 @@ function Movie() {
               }
               fetchRequestMovieSearch();
     }, [query]);
-    console.log(movies)
+ 
     return (
         <>
             <Search location={location} onSubmit={handleSubmit} />
-            <List>
-      {movies.map(
-        ({ id, title }) =>
-          (
-            <li key={id}>
-              <MovieLink
-                key={id}
-                to={`/movies/${id}`}
-                state={{ from: location }}
-              >
-                {title}
-              </MovieLink>
-            </li>
-          )
-      )}
-    </List>
+            <MoviesList movies={movies} />
         </>
     );
 }
