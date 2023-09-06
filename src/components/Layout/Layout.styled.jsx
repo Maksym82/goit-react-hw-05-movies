@@ -6,7 +6,7 @@ const Header = styled.header`
     position: fixed;
     padding: 10px 15px;
     width: 100%;
-    background-color: #fff;
+    background-color: blue;
 `;
 
 const Navi = styled.nav`
