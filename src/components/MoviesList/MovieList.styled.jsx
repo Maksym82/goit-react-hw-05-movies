@@ -14,4 +14,13 @@ const MovieLink = styled(Link)`
     text-decoration: none;
 `;
 
-export { List, MovieLink };
+const Button = styled.button`
+    width: 150px;
+    height: 50px;
+    background-color: blue;
+    color: white;
+    border-radius: 4px;
+    margin-bottom: 20px;
+`;
+
+export { List, MovieLink, Button };

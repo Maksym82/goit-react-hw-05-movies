@@ -1,9 +1,10 @@
 import { useState, useEffect, Suspense } from "react";
-import { Outlet, useParams } from "react-router-dom";
+import { NavLink, Outlet, useLocation, useParams } from "react-router-dom";
 import { fetchMovieDetails } from '../services/api';
 
 import { Addition, AdditionLink, AdditionList, Container, Description,  Text, Title } from "components/MovieDescription/MovieDescription.styled";
 import question from '../components/MovieDescription/question.png';
+import { Button } from "components/MoviesList/MovieList.styled";
 
 function MovieDetails() {
     const [details, setDetails] = useState({});
@@ -26,11 +27,14 @@ function MovieDetails() {
     const { title, release_date, vote_average, overview, genres, poster_path } =
     details;
     const date = new Date(release_date).getFullYear();
-    
-    
+    const location = useLocation();
+    const goBackPath = location.state?.from || '/';
+
     return (
         <>
-          
+        <NavLink to={goBackPath}>
+          <Button>Go Back</Button>
+        </NavLink>
             <>
               <Container>
                 <img
